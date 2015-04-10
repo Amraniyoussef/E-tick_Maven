@@ -1,8 +1,11 @@
 package service;
 
+import java.util.List;
+
 import dao.IDAOObject;
 
 import model.Date_Ev;
+import model.Lieu;
 
 
 
@@ -40,7 +43,10 @@ public Date_Ev searchPersonById(int id) {
 	return (Date_Ev) dateDao.findById(id);
 }
 
+public List<Date_Ev> select(String f) {
 	
+	return dateDao.select(f);
+}
 	
 
 }

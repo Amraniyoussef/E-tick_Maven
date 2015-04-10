@@ -1,7 +1,10 @@
 package dao;
 
+import java.util.List;
+
 import model.Date_Ev;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 
@@ -24,5 +27,13 @@ public class DAODate extends HibernateDaoSupport implements IDAOObject<Date_Ev>{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@SuppressWarnings("unchecked")
+	public List<Date_Ev> select(String f)throws DataAccessException {
+		// TODO Auto-generated method stub
+		return  (List<Date_Ev>)getHibernateTemplate().find(f);
+	}
+	
+	
 	
 }

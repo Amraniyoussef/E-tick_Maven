@@ -15,20 +15,42 @@ public class TypeEvenement {
 
    public String libelleTypeEvenementt;
 
-   public int nbrType;
+ public int numgenre ;
    
 
-   public void setNumTypeEvenement(int numTypeEvenement) {
+   public int getNumTypeEvenement() {
+	return numTypeEvenement;
+}
+
+
+
+public void setNumTypeEvenement(int numTypeEvenement) {
 	this.numTypeEvenement = numTypeEvenement;
 }
+
+
+
+public String getLibelleTypeEvenementt() {
+	return libelleTypeEvenementt;
+}
+
+
+
+public int getNumgenre() {
+	return numgenre;
+}
+
+public void setNumgenre(int numgenre) {
+	this.numgenre = numgenre;
+}
+
+
 
 public void setLibelleTypeEvenementt(String libelleTypeEvenementt) {
 	this.libelleTypeEvenementt = libelleTypeEvenementt;
 }
 
-public void setNbrType(int nbrType) {
-	this.nbrType = nbrType;
-}
+
 
 @OneToMany
 public Collection<GenreEvenement> genreEvenement;

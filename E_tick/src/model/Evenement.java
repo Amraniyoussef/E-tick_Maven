@@ -17,8 +17,38 @@ public class Evenement {
    public int qteStock;
 
    public int prixMin;
-   
-   public Collection<LigneCommande> ligneCommande;
+   public String url ;
+   public Lieu numLieu ;
+   public TypeEvenement numTypeEv ;
+   public Date_Ev numDate ;
+  
+   public TypeEvenement getNumTypeEv() {
+	return numTypeEv;
+}
+
+public void setNumTypeEv(TypeEvenement numTypeEv) {
+	this.numTypeEv = numTypeEv;
+}
+
+public Date_Ev getNumDate() {
+	return numDate;
+}
+
+public void setNumDate(Date_Ev numDate) {
+	this.numDate = numDate;
+}
+
+public Lieu getNumLieu() {
+	return numLieu;
+}
+
+public void setNumLieu(Lieu numLieu) {
+	this.numLieu = numLieu;
+}
+
+
+
+public Collection<LigneCommande> ligneCommande;
    /** @pdRoleInfo migr=no name=Date assc=evenementDate coll=java.util.Collection impl=java.util.HashSet mult=1..* */
    public Date_Ev date;
    public Collection<EvenementCategorie> evenementCategorie;
@@ -30,7 +60,17 @@ public class Evenement {
   
   
    
-   public Date_Ev getDate() {
+  
+
+public String getUrl() {
+	return url;
+}
+
+public void setUrl(String url) {
+	this.url = url;
+}
+
+public Date_Ev getDate() {
 	return date;
 }
 

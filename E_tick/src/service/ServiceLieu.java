@@ -1,7 +1,10 @@
 package service;
 
+import java.util.List;
+
 import dao.IDAOObject;
 
+import model.GenreEvenement;
 import model.Lieu;
 
 public class ServiceLieu implements IServiceObject<Lieu>{
@@ -41,6 +44,10 @@ public class ServiceLieu implements IServiceObject<Lieu>{
 	public Lieu searchPersonById(int id) {
 		// TODO Auto-generated method stub
 		return (Lieu) lieuDao.findById(id);
+	}
+public List<Lieu> select(String f) {
+		
+		return lieuDao.select(f);
 	}
 
 }

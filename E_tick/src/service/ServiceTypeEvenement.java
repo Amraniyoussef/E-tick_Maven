@@ -1,6 +1,9 @@
 package service;
 
+import java.util.List;
+
 import dao.IDAOObject;
+import model.GenreEvenement;
 import model.TypeEvenement;
 
 
@@ -39,6 +42,10 @@ IDAOObject typeEvenementDao;
 	public TypeEvenement searchPersonById(int id) {
 		// TODO Auto-generated method stub
 		return (TypeEvenement) typeEvenementDao.findById(id);
+	}
+public List<TypeEvenement> select(String f) {
+		
+		return typeEvenementDao.select(f);
 	}
 
 }

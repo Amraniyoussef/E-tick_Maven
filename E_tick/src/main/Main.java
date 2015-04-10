@@ -64,11 +64,11 @@ sauve(c);
 		EvenementCategorie ec = new EvenementCategorie();
 
 		Categorie c = new Categorie();
-		c.setNbCategorie(4);
+
 		c.setNomCategorie("C");
 		categorieService.create(c);
 		Categorie c2 = new Categorie();
-		c.setNbCategorie(1);
+
 		c.setNomCategorie("A");
 		categorieService.create(c2);
 		 
@@ -79,7 +79,8 @@ sauve(c);
 		e.setNomEvenement("Match");
 		e.setPrixMin(25);
 		e.setQteStock(20);
-
+     //   e.setNumLieu(1);
+        
 		evenementService.create(e);
 
 		IServiceObject evenementcategorieService=(IServiceObject)context.getBean("evenementcategorieService");
@@ -105,7 +106,7 @@ sauve(c);
 		
 		Date datedebut= new Date(2005,01,15);
 		
-		D.setDateDebut(datedebut);
+		D.setDateDebut("ghh");
 
 		DateService.create(D);
 

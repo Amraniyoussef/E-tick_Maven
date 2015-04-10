@@ -1,10 +1,13 @@
 package service;
 
+import java.util.List;
+
+import dao.DAOGenreEvenement;
 import dao.IDAOObject;
 import model.GenreEvenement;
 
 public class ServiceGenreEvenement implements IServiceObject<GenreEvenement>{
-	IDAOObject daogenreevenement;
+	DAOGenreEvenement daogenreevenement;
 	@Override
 	public void create(GenreEvenement ge) {
 		// TODO Auto-generated method stub
@@ -24,11 +27,13 @@ public class ServiceGenreEvenement implements IServiceObject<GenreEvenement>{
 	}
 	
 
-	public IDAOObject getDaogenreevenement() {
+	
+
+	public DAOGenreEvenement getDaogenreevenement() {
 		return daogenreevenement;
 	}
 
-	public void setDaogenreevenement(IDAOObject daogenreevenement) {
+	public void setDaogenreevenement(DAOGenreEvenement daogenreevenement) {
 		this.daogenreevenement = daogenreevenement;
 	}
 
@@ -37,5 +42,8 @@ public class ServiceGenreEvenement implements IServiceObject<GenreEvenement>{
 		// TODO Auto-generated method stub
 		return (GenreEvenement) daogenreevenement.findById(id);
 	}
-
+public List<GenreEvenement> select(String f) {
+		
+		return daogenreevenement.select(f);
+	}
 }

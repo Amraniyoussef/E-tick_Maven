@@ -11,11 +11,11 @@
         <property name="nomGenreEvenement" type="java.lang.String">
             <column name="NOMGENREEVENEMENT" />
         </property>
-        <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
+      <!--    <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
             <key>
                 <column name="NUMGENREEVENEMENT" />
             </key>
             <one-to-many class="model.Evenement" />
-        </bag>
+        </bag> -->
     </class>
 </hibernate-mapping>

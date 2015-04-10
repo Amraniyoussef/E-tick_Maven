@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Client;
+import model.Evenement;
 import model.Lieu;
 
 import org.apache.struts.action.ActionForm;
@@ -35,6 +36,7 @@ public class LieuAction extends ActionSupport{
 		li.setCapacite(pr.getCapacite());
 		li.setNbCategorie(pr.getNbCategorie());
 		li.setNomLieu(pr.getNomLieu());
+		
 		lieuService.create(li);
 		
 		

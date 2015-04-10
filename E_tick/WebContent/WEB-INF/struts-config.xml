@@ -63,7 +63,25 @@
             name="mesLieu"
             type="form.LieuForm"/>
             
+            <!-- Form Genre Evenement -->
+            <form-bean
+            name="mesGenreEvenement"
+            type="form.GenreEvenementForm"/>
             
+            <!-- Form Type Evenement -->
+              <form-bean
+            name="mesTypeEvenement"
+            type="form.TypeEvenementForm"/>
+            
+            <!-- Form Catégorie -->
+              <form-bean
+            name="mesCategorie"
+            type="form.CategorieForm"/>
+            
+              <!-- Form Evenement -->
+              <form-bean
+            name="mesEvenement"
+            type="form.EvenementForm"/>
             
     <!-- sample form bean descriptor for a DynaActionForm
         <form-bean
@@ -120,24 +138,119 @@
             path="/AjoutLieu"
             forward="/pages/FormulaireLieu.jsp"/>
            
+           <action
+            path="/AjoutGenreEvenement"
+            forward="/pages/FormulaireGenreEvenement.jsp"/>
+ 
+ <action
+            path="/AjoutTypeEvenement"
+            forward="/pages/FormulaireTypeEvenement.jsp"/>
+ 
+ <action
+            path="/AjoutCategorie"
+            forward="/pages/FormulaireCategorie.jsp"/>
+ 
+
+ 
+ <!-- ===========================   Moh     -->
+        <action
+            path="/AjoutClient"
+            forward="/Html/FormulaireLogin.jsp"/>
+            
+           
+          
+           <action
+            path="/Admin"
+            forward="/Admin/accueiladmin.jsp"/>
+            
+             <action
+            path="/sport"
+            forward="/Html/sport.jsp"/>
+           
+             <action
+            path="/ConnexionClient"
+            forward="/Html/Login.jsp"/>
+            
+            
+         <!-- ===========================   Moh-->
+         
+         <!-- ===========================   Moh-->
+        
+            
+             <action
+            path="/AjouterSeance"
+            forward="/Html/FormulaireSeance.jsp"/>
+            
+            
+             <action
+            path="/AjouterGenreEvenement"
+            forward="/Html/FormulaireGenreEvenement.jsp"/>
+            
+            
+             <action
+            path="/AjouterLieu"
+            forward="/Html/FormulaireLieu.jsp"/>
+            
+            
+             <action
+            path="/AjouterTypeEvenment"
+            forward="/Html/FormulaireTypeEvenement.jsp"/>
+            
+            <action
+            path="/acceuil"
+            forward="/Index1.jsp"/>
+         
+          <!-- ===========================   Moh     -->
  
           <!-- Action Client -->
             <action  path="/client" type="action.ClientAction" name="mesClient">
-         <forward name="suite" path="/index.jsp" />     
+         <forward name="suite" path="/Index1.jsp" />     
             </action>
             
             <!-- Action Seance -->
             <action  path="/seance" type="action.SeanceAction" name="mesSeance">
-         <forward name="suite" path="/index.jsp" />     
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
             </action>
             
              <!-- Action Lieu -->
             <action  path="/lieu" type="action.LieuAction" name="mesLieu">
-         <forward name="suite" path="/index.jsp" />     
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
             </action>
             
-            <action  path="/toto" type="action.PanierAction" name="mesParametres">
-         <forward name="suite" path="/pages/helloWorld.jsp"/>     
+              <!-- Action Genre Evenement -->
+            <action  path="/genre" type="action.GenreEvenementAction" name="mesGenreEvenement">
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
+            </action>
+            
+                 <!-- Action Type Evenement -->
+            <action  path="/type" type="action.TypeEvenementAction" name="mesTypeEvenement">
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
+            </action>
+            
+                <!-- Action Catégorie -->
+            <action  path="/categorie" type="action.CategorieAction" name="mesCategorie">
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
+            </action>
+            
+            
+            
+           
+            
+            <action  path="/RecupeGenre" type="action.RecupeAction" >
+         <forward name="suite" path="/Html/FormulaireTypeEvenement.jsp"/>     
+            </action>
+            
+            <action  path="/ListeEvenement" type="action.ListEvenementAction" >
+         <forward name="suite" path="/Html/listeEvenement.jsp"/>     
+            </action>
+            
+             <action  path="/RecupeInfoLiGe" type="action.RecupInfoLieuGenre" >
+         <forward name="suite" path="/Html/FormulaireEvenement.jsp"/>     
+            </action>
+            
+               <!-- Action Evenement -->
+            <action  path="/evenement" type="action.EvenementAction" name="mesEvenement">
+         <forward name="suite" path="/Admin/accueiladmin.jsp" />     
             </action>
     <!-- sample input and input submit actions
 

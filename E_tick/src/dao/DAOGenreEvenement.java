@@ -1,8 +1,11 @@
 package dao;
 
 
+import java.util.List;
+
 import model.GenreEvenement;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 public class DAOGenreEvenement extends HibernateDaoSupport implements IDAOObject<GenreEvenement>{
@@ -24,5 +27,9 @@ public class DAOGenreEvenement extends HibernateDaoSupport implements IDAOObject
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	@SuppressWarnings("unchecked")
+	public List<GenreEvenement> select(String f) throws DataAccessException {
+			
+			return  (List<GenreEvenement>)getHibernateTemplate().find(f);
+		}
 }

@@ -8,10 +8,10 @@
             <column name="NUMDATE" />
             <generator class="increment" />
         </id>
-        <property name="dateDebut" type="java.util.Date" access="field">
+        <property name="dateDebut" type="java.lang.String" access="field">
             <column name="DATEDEBUT" />
         </property>
-        <property name="dateFin" type="java.util.Date" access="field">
+        <property name="dateFin" type="java.lang.String" access="field">
             <column name="DATEFIN" />
         </property>
    <!--       <bag name="seance" table="SEANCE" inverse="false" lazy="true">
@@ -20,14 +20,15 @@
             </key>
             <one-to-many class="model.Seance" />
         </bag> -->
-        <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
+    <!--    <bag name="evenement" table="EVENEMENT" inverse="false" lazy="true">
             <key>
                 <column name="NUMDATE_Ev" />
             </key>
             <one-to-many class="model.Evenement" />
         </bag>
+         
        
-        
-        
+         <one-to-one name="numEven" class="model.Evenement"></one-to-one>
+        -->
     </class>
 </hibernate-mapping>

@@ -6,30 +6,44 @@ public class Date_Ev {
    
    public int numDate;
 
-   public Date dateDebut;
+   public String dateDebut;
    
-   public Date dateFin;
+   public String dateFin;
    
   
    public Collection<Seance> seance;
    
-   public Collection<Evenement> evenement;
+  /* public Collection<Evenement> evenement;
    
    
  
    public void setEvenement(Collection<Evenement> evenement) {
 	this.evenement = evenement;
 }
-
+*/
 public void setNumDate(int numDate) {
 	this.numDate = numDate;
 }
 
-public void setDateDebut(Date dateDebut) {
+
+
+public int getNumDate() {
+	return numDate;
+}
+
+public String getDateDebut() {
+	return dateDebut;
+}
+
+public void setDateDebut(String dateDebut) {
 	this.dateDebut = dateDebut;
 }
 
-public void setDateFin(Date dateFin) {
+public String getDateFin() {
+	return dateFin;
+}
+
+public void setDateFin(String dateFin) {
 	this.dateFin = dateFin;
 }
 
@@ -95,19 +109,19 @@ public Collection<Seance> getSeance() {
       }
    }
    /** @pdGenerated default getter */
-   public Collection<Evenement> getEvenement() {
+ /*  public Collection<Evenement> getEvenement() {
       if (evenement == null)
          evenement = new HashSet<Evenement>();
       return evenement;
-   }
+   }/*
    
    /** @pdGenerated default iterator getter */
-   public Iterator getIteratorEvenement() {
+/*   public Iterator getIteratorEvenement() {
       if (evenement == null)
          evenement = new HashSet<Evenement>();
       return evenement.iterator();
    }
-   
+   */
   
    
   

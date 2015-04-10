@@ -271,5 +271,6 @@
 	<artifactId>spring-struts</artifactId>
 	<version>3.0.5.RELEASE</version>
 </dependency>
+
   </dependencies>
 </project>

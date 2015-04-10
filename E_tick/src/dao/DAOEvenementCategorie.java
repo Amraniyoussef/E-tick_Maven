@@ -1,7 +1,10 @@
 package dao;
 
+import java.util.List;
+
 import model.EvenementCategorie;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 
@@ -24,6 +27,12 @@ public class DAOEvenementCategorie extends HibernateDaoSupport implements IDAOOb
 	public EvenementCategorie findById(int id) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<EvenementCategorie> select(String f)throws DataAccessException {
+		// TODO Auto-generated method stub
+		return  (List<EvenementCategorie>)getHibernateTemplate().find(f);
 	}
 	
 	

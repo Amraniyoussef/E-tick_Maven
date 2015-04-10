@@ -11,9 +11,7 @@
         <property name="nomCategorie" type="java.lang.String">
             <column name="NOMCATEGORIE" />
         </property>
-        <property name="nbCategorie" type="int">
-            <column name="NBCATEGORIE" />
-        </property>
+        
        
     </class>
 </hibernate-mapping>

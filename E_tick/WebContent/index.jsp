@@ -21,7 +21,9 @@
 <a href="AjoutClient.do">Inscription</a></br></br>
 <a href="AjoutSeance.do">Ajouter une séance</a></br></br>
 <a href="AjoutLieu.do">Ajouter un lieu</a></br></br>
-
+<a href="AjoutGenreEvenement.do">Ajouter un Genre d'evenement</a></br></br>
+<a href="RecupeGenre.do">Ajouter un Type devenement</a></br></br>
+<a href="AjoutCategorie.do">Ajouter une Catégorie</a></br></br>
 <%--
 
 Redirect default requests to Welcome global ActionForward.
